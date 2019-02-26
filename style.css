@@ -22,8 +22,8 @@ nav.active {
     max-width: 180px;
 }
 nav.active ul { align-items: flex-start }
-nav ul li a span { opacity: 0 }
-nav.active ul li a span {
+nav ul li a span:not(.badge) { opacity: 0 }
+nav.active ul li a span:not(.badge) {
     opacity: 1;
     transition: opacity 2s;
     margin-left: .5em;
@@ -114,6 +114,25 @@ nav ul li:not(.brand) a:hover, nav ul li:not(.brand).active a {
 nav ul li a i {
     font-size: 1.25em;
     min-width: 25px;
+}
+nav ul li a span.badge {
+    position: relative;
+    top: -15px;
+    right: 5px;
+    color: #3699ff;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: .25em;
+    padding: .13em .30em;
+    font-size: 11px;
+    min-height: 18px;
+    max-height: 18px;
+    text-align: center;
+}
+nav ul li:not(.brand) a:hover span.badge, nav ul li:not(.brand).active a span.badge {
+    background-color: #3699ff;
+    color: #fff;
+    border: 1px solid #fff;
 }
 main {
     display: flex;
