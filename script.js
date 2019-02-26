@@ -1,9 +1,9 @@
 document.getElementById('toc').addEventListener('click', toogleMenu);
 
 function toogleMenu(e) {
-    var parent = null;
+    var parent = e.target;
     if ( e.target.tagName === 'I' ) parent = e.target.parentElement;
-    parent = parent.parentElement;
+    if ( e.target.tagName === 'a' ) parent = e.target.parentElement.parentElement;
     if ( !parent.classList.contains('open') ) {
         parent.classList.add('open');
         parent.children[0].children[0].classList.remove('fa-angle-double-right');
