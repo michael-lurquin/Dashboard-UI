@@ -13,7 +13,6 @@ nav {
     background-color: #3699ff;
     width: 64px;
     max-width: 64px;
-    transition: width 500ms;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,7 +20,6 @@ nav {
 nav.active {
     width: 180px;
     max-width: 180px;
-    transition: width 500ms;
 }
 nav.active ul { align-items: flex-start }
 nav ul li a span { opacity: 0 }
