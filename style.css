@@ -11,16 +11,16 @@ body {
 nav {
     height: 100vh;
     background-color: #3699ff;
-    width: 5em;
-    max-width: 5em;
+    width: 64px;
+    max-width: 64px;
     transition: width 500ms;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 nav.active {
-    width: 17em;
-    max-width: 17em;
+    width: 180px;
+    max-width: 180px;
 }
 nav.active ul { align-items: flex-start }
 nav ul li a span { opacity: 0 }
